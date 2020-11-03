@@ -1,11 +1,12 @@
 from typing import Dict
 
+
 class Player:
     name: str
     hp: int
     mp: int
     skills: Dict
-    guilt: str
+    guild: str
 
     def __init__(self, name, hp, mp):
         self.name = name
@@ -31,8 +32,3 @@ class Player:
         return res
 
 
-player = Player("George", 50, 100)
-
-print(player.add_skill("Shield Break", 20))
-
-print(player.player_info())
