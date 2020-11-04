@@ -27,8 +27,8 @@ class Album:
         if self.published:
             return "Cannot remove songs. Album is published."
 
-        if song_name in [s for s in self.songs]:
-            song_to_be_removed = [s for s in self.songs if s == song_name]
+        if song_name in [s.name for s in self.songs]:
+            song_to_be_removed = [s for s in self.songs if s.name == song_name]
             self.songs.remove(song_to_be_removed)
             return f"Removed song {song_name} from album {self.name}."
 
@@ -49,18 +49,4 @@ class Album:
 
         return result
 
-
-song = Song("Running in the 90s", 3.45, False)
-
-print(song.get_info())
-
-album = Album("Initial D", song)
-
-second_song = Song("Around the World", 2.34, False)
-
-print(album.add_song(second_song))
-
-print(album.details())
-
-print(album.publish())
 
