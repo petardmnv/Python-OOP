@@ -1,4 +1,4 @@
-from project.album import Album, Song
+from spoopify.album import Album, Song
 
 
 class Band:
