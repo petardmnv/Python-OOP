@@ -1,4 +1,4 @@
-from project.library import Library
+#from project.library import Library
 
 
 class User:
@@ -7,7 +7,7 @@ class User:
         self.username = username
         self.books = []
 
-    def get_book(self, author: str, book_name: str, days_to_return: int, library: Library):
+    def get_book(self, author: str, book_name: str, days_to_return: int, library: 'Library'):
         if book_name == library.books_available[author]:
             if book_name in library.rented_books[self.username]:
                 return f"The book {book_name} is already rented and will be available in"\
@@ -17,21 +17,15 @@ class User:
             library.books_available[author].remove(book_name)
         return f"{book_name} successfully rented for the next {days_to_return} days!"
 
-    def return_book(self, author: str, book_name: str, library: Library):
-        pass
+    def return_book(self, author: str, book_name: str, library: 'Library'):
+        if book_name in self.books:
+            library.rented_books[self.username].pop(book_name)
+            library.books_available[author].append(book_name)
+            self.books.remove(book_name)
+        else:
+            return f"{self.username} doesn't have this book in his/her records!"
 
     def info(self):
-        pass
+            pass
 
 
-user = User(1, "Peter")
-user1 = User(2, "deter")
-library = Library()
-library.add_user(user)
-library.add_user(user1)
-library.remove_user(user1)
-print(library.change_username(1, "Peter"))
-
-print(library.change_username(1, "Peho"))
-
-[print(f'{user_record.user_id}, {user_record.username}, {user_record.books}') for user_record in library.user_records]
