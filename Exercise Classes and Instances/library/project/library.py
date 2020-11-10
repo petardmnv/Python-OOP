@@ -1,11 +1,11 @@
 #from library.project.user import User
-#from typing import Dict, List, ClassVar
+from typing import Dict, List, ClassVar
 
 
 class Library:
-    '''user_records = List[User]
-    books_available = Dict[str, List[str]]
-    rented_books = Dict[str, Dict[str, int]]'''
+    '''user_records = List[User] = []
+    books_available = Dict[str, List[str]] = {}
+    rented_books = Dict[str, Dict[str, int]] = {}'''
     user_records = list()
     books_available = dict()
     rented_books = dict()
