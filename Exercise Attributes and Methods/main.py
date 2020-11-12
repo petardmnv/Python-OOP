@@ -1,14 +1,14 @@
-from project.category import Category
-from project.topic import Topic
-from project.document import Document
-from project.storage import Storage
+from documentmanagement.category import Category
+from documentmanagement.topic import Topic
+from documentmanagement.document import Document
+from documentmanagement.storage import Storage
 
 
 c1 = Category(1, "work")
 
 t1 = Topic(1, "daily tasks", "C:\\work_documents")
 
-d1 = Document(1, 1, 1, "finilize project")
+d1 = Document(1, 1, 1, "finilize documentmanagement")
 
 
 

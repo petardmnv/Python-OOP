@@ -1,7 +1,7 @@
 from typing import List
-from project.category import Category
-from project.topic import Topic
-from project.document import Document
+from documentmanagement.category import Category
+from documentmanagement.topic import Topic
+from documentmanagement.document import Document
 
 
 class Storage:
