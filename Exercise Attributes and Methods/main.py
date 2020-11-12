@@ -1,45 +1,39 @@
-from movieworld.customer import Customer
-
-from movieworld.dvd import DVD
-
-from movieworld.movie_world import MovieWorld
-
+from project.category import Category
+from project.topic import Topic
+from project.document import Document
+from project.storage import Storage
 
 
-c1 = Customer("John", 16, 1)
+c1 = Category(1, "work")
 
-c2 = Customer("Anna", 55, 2)
+t1 = Topic(1, "daily tasks", "C:\\work_documents")
 
-
-
-d1 = DVD("Black Widow", 1, 2020, "April", 18)
-
-d2 = DVD.from_date(2, "The Croods 2", "23.12.2020", 3)
+d1 = Document(1, 1, 1, "finilize project")
 
 
 
-movie_world = MovieWorld("The Best Movie Shop")
+d1.add_tag("urgent")
+
+d1.add_tag("work")
 
 
 
-movie_world.add_customer(c1)
+storage = Storage()
 
-movie_world.add_customer(c2)
+storage.add_category(c1)
 
+storage.add_topic(t1)
 
-
-movie_world.add_dvd(d1)
-
-movie_world.add_dvd(d2)
+storage.add_document(d1)
 
 
 
-print(movie_world.rent_dvd(1, 1))
+print(c1)
 
-print(movie_world.rent_dvd(2, 1))
+print(t1)
 
-print(movie_world.rent_dvd(1, 2))
+print(storage.get_document(1))
 
+print(storage)
 
-print(movie_world)
 
