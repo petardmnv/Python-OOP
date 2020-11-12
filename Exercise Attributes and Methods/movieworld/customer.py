@@ -1,5 +1,5 @@
 from typing import List
-from project.dvd import DVD
+from movieworld.dvd import DVD
 
 
 class Customer:

@@ -1,8 +1,8 @@
-from project.customer import Customer
+from movieworld.customer import Customer
 
-from project.dvd import DVD
+from movieworld.dvd import DVD
 
-from project.movie_world import MovieWorld
+from movieworld.movie_world import MovieWorld
 
 
 
