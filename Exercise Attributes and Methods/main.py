@@ -1,39 +1,49 @@
-from documentmanagement.category import Category
-from documentmanagement.topic import Topic
-from documentmanagement.document import Document
-from documentmanagement.storage import Storage
+from gym.customer import Customer
 
+from gym.equipment import Equipment
 
-c1 = Category(1, "work")
+from gym.exercise_plan import ExercisePlan
 
-t1 = Topic(1, "daily tasks", "C:\\work_documents")
+from gym.gym import Gym
 
-d1 = Document(1, 1, 1, "finilize documentmanagement")
+from gym.subscription import Subscription
 
-
-
-d1.add_tag("urgent")
-
-d1.add_tag("work")
+from gym.trainer import Trainer
 
 
 
-storage = Storage()
+customer = Customer("John", "Maple Street", "john.smith@gmail.com")
 
-storage.add_category(c1)
+equipment = Equipment("Treadmill")
 
-storage.add_topic(t1)
+trainer = Trainer("Peter")
 
-storage.add_document(d1)
+subscription = Subscription("14.05.2020", 1, 1, 1)
+
+plan = ExercisePlan(1, 1, 20)
 
 
 
-print(c1)
+gym = Gym()
 
-print(t1)
 
-print(storage.get_document(1))
 
-print(storage)
+gym.add_customer(customer)
+
+gym.add_equipment(equipment)
+
+gym.add_trainer(trainer)
+
+gym.add_plan(plan)
+
+gym.add_subscription(subscription)
+
+
+
+print(Customer.get_next_id())
+
+
+
+print(gym.subscription_info(1))
 
 

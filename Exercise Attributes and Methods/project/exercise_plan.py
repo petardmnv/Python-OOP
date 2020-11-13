@@ -1,2 +1,0 @@
-class ExercisePlan:
-    pass
