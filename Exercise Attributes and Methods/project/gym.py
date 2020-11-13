@@ -1,10 +1,10 @@
 from typing import Dict, List
 
-from gym.customer import Customer
-from gym.equipment import Equipment
-from gym.exercise_plan import ExercisePlan
-from gym.subscription import Subscription
-from gym.trainer import Trainer
+from project.customer import Customer
+from project.equipment import Equipment
+from project.exercise_plan import ExercisePlan
+from project.subscription import Subscription
+from project.trainer import Trainer
 
 
 class Gym:
@@ -70,6 +70,6 @@ class Gym:
         plan = self.plans_id[curr_s.exercise_id]
         equipment = self.equipment_id[plan.equipment_id]
 
-        return '\n'.join(map(str, [curr_s, customer, trainer, plan, equipment]))
+        return '\n'.join(map(str, [curr_s, customer, trainer, equipment, plan]))
 
 

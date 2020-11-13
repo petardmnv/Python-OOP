@@ -1,14 +1,14 @@
-from gym.customer import Customer
+from project.customer import Customer
 
-from gym.equipment import Equipment
+from project.equipment import Equipment
 
-from gym.exercise_plan import ExercisePlan
+from project.exercise_plan import ExercisePlan
 
-from gym.gym import Gym
+from project.gym import Gym
 
-from gym.subscription import Subscription
+from project.subscription import Subscription
 
-from gym.trainer import Trainer
+from project.trainer import Trainer
 
 
 
@@ -20,7 +20,9 @@ trainer = Trainer("Peter")
 
 subscription = Subscription("14.05.2020", 1, 1, 1)
 
-plan = ExercisePlan(1, 1, 20)
+
+plan1 = ExercisePlan.from_hours(1, 1, 2)
+plan = ExercisePlan(2, 2, 20)
 
 
 
@@ -34,7 +36,7 @@ gym.add_equipment(equipment)
 
 gym.add_trainer(trainer)
 
-gym.add_plan(plan)
+gym.add_plan(plan1)
 
 gym.add_subscription(subscription)
 

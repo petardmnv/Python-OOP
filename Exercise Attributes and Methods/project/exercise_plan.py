@@ -16,6 +16,6 @@ class ExercisePlan:
         return cls._id + 1
 
     @classmethod
-    def from_hours(cls, trainer_id:int, equipment_id:int, hours:int):
+    def from_hours(cls, trainer_id: int, equipment_id: int, hours: int):
         return cls(trainer_id, equipment_id, duration=hours*60)
 
