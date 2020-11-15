@@ -1,50 +1,35 @@
-from players_and_monster.hero import Hero
-from players_and_monster.elf import Elf
-from players_and_monster.wizard import Wizard
-from players_and_monster.muse_elf import MuseElf
-from players_and_monster.knight import Knight
-from players_and_monster.blade_knight import BladeKnight
-from players_and_monster.dark_knight import DarkKnight
-from players_and_monster.dark_wizard import DarkWizard
-from players_and_monster.soul_master import SoulMaster
+from restaurant.beverage.beverage import Beverage
+from restaurant.product import Product
+from restaurant.food.soup import Soup
 
+product = Product("coffee")
 
-hero = Hero("H", 3)
+print(product.__class__.__name__)
 
-print(hero.username)
+print(product.name)
 
-print(hero.level)
+print(product.price)
 
-print(str(hero))
+beverage = Beverage("coffee", 2.5, 50)
 
-elf = Elf("E", 4)
+print(beverage.__class__.__name__)
 
-print(str(elf))
+print(beverage.__class__.__bases__[0].__name__)
 
-m_e = MuseElf("ME", 14)
+print(beverage.name)
 
-print(str(m_e))
+print(beverage.price)
 
-w = Wizard("W", 2)
+print(beverage.milliliters)
 
-print(str(w))
+soup = Soup("fish soup", 9.90, 230)
 
-d_w = DarkWizard("DW", 12)
+print(soup.__class__.__name__)
 
-print(str(d_w))
+print(soup.__class__.__bases__[0].__name__)
 
-s_w = SoulMaster("SW", 22)
+print(soup.name)
 
-print(str(s_w))
+print(soup.price)
 
-k = Knight("K", 7)
-
-print(str(k))
-
-d_k = DarkKnight("DK", 17)
-
-print(str(d_k))
-
-b_k = BladeKnight("BK", 27)
-
-print(str(b_k))
+print(soup.grams)

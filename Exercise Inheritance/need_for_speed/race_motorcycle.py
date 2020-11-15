@@ -1,4 +1,4 @@
-from project.motorcycle import Motorcycle
+from need_for_speed.motorcycle import Motorcycle
 
 
 class RaceMotorcycle(Motorcycle):
