@@ -1,16 +1,28 @@
-# This is a sample Python script.
+from project.food import Food, Vegetable, Fruit, Seed, Meat
+from  project.animals.animal import Animal, Mammal, Bird
+from project.animals.mammals import Tiger, Cat, Dog, Mouse
+from project.animals.birds import Hen, Owl
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+meat = Meat(4)
+veg = Vegetable(2)
+fruit = Fruit(1)
+seed = Seed(5)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+owl = Owl("Pip", 10, 10)
+hen = Hen("Hen", 5, 5)
+m = Mouse("Mouse", 1, "B")
+c = Cat("Cat", 3, "B")
+d = Dog("Dog", 5, "B")
+t = Tiger("Tiger", 10, "B")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print(t)
+print(t.make_sound())
+print(t.feed(meat))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(t)
+
+
+print(t.feed(meat))
+print(t)
