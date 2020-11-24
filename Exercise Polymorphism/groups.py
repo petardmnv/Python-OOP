@@ -46,3 +46,4 @@ print(third_group[0])
 
 for person in third_group:
     print(person)
+
